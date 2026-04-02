@@ -29,7 +29,7 @@ namespace LoginScreen
 
         private void txtPW_Enter(object sender, EventArgs e)
         {
-            if (txtPW.Text == "")
+            if (txtPW.Text == "패스워드")
             {
                 txtPW.Text = "";
                 txtPW.ForeColor = Color.Black;
@@ -41,7 +41,7 @@ namespace LoginScreen
         {
             if (string.IsNullOrEmpty(txtPW.Text))
             {
-                txtPW.Text = "비밀번호";
+                txtPW.Text = "패스워드";
                 txtPW.ForeColor = Color.Silver;
                 txtPW.UseSystemPasswordChar = false;
             }
@@ -69,7 +69,6 @@ namespace LoginScreen
             if (e.KeyCode == Keys.Enter)
             {
                 e.SuppressKeyPress = true;
-                txtPW.Text = "";
                 txtPW.Focus();
             }
         }
