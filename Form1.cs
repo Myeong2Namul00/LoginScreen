@@ -60,7 +60,7 @@ namespace LoginScreen
             else
             {
                 //MessageBox.Show("로그인 실패!", "로그인", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                lblErrorMsg.Visible=true;
+                lblErrorMsg.Visible = true;
             }
         }
 
@@ -71,6 +71,18 @@ namespace LoginScreen
                 e.SuppressKeyPress = true;
                 txtPW.Focus();
             }
+            else if (e.KeyCode == Keys.Escape)
+            {
+            e.SuppressKeyPress = true;
+                if (txtID.Text == "")
+                {
+                    txtPW.Text = "패스워드";
+                    txtPW.ForeColor = Color.Silver;
+                    txtPW.UseSystemPasswordChar = false;
+                }
+                txtID.Text = "";
+                txtID.ForeColor = Color.Black;
+            }
         }
 
         private void txtPW_KeyDown(object sender, KeyEventArgs e)
@@ -79,6 +91,32 @@ namespace LoginScreen
             {
                 e.SuppressKeyPress = true;
                 btnLogin.PerformClick();
+            }
+            else if (e.KeyCode == Keys.Escape)
+            {
+                e.SuppressKeyPress = true;
+                if (txtPW.Text == "")
+                {
+                    txtID.Text = "아이디";
+                    txtID.ForeColor = Color.Silver;
+                }
+                txtPW.Text = "";
+                txtPW.ForeColor = Color.Black;
+            }
+        }
+
+        private void chkPWvisible_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkPWvisible.Checked)
+            {
+                txtPW.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                if (txtPW.Text != "패스워드")
+                {
+                    txtPW.UseSystemPasswordChar = true;
+                }
             }
         }
     }
