@@ -16,9 +16,9 @@
 
 ## 실행 화면 (과제1)
 
-<img src="img/screenshot-1.png" alt="과제1 실행화면1" width="25%" />
-<img src="img/screenshot-2.png" alt="과제1 실행화면2" width="25%" />
-<img src="img/screenshot-3.png" alt="과제1 실행화면3" width="25%" />
+<img src="img/screenshot-1.png" alt="과제1 실행화면1" width="50%" />
+<img src="img/screenshot-2.png" alt="과제1 실행화면2" width="50%" />
+<img src="img/screenshot-3.png" alt="과제1 실행화면3" width="50%" />
 
 - 과제 내용
     - 컨트롤 배치와 기본적인 속성 설정
@@ -32,7 +32,7 @@
 
 ## 실행 화면 (과제2)
 
-<img src="img/screenshot-4.png" alt="과제2 실행화면1" width="25%" />
+<img src="img/screenshot-4.png" alt="과제2 실행화면1" width="50%" />
 
 - 과제 내용
     - 아이디 또는 패스워드가 잘못 입력되었을 때 에러 메시지 보여주기
@@ -45,9 +45,9 @@
 
 ## 실행 화면 (과제3)
 
-<img src="img/screenshot-5.png" alt="과제3 실행화면1" width="25%" />
-<img src="img/screenshot-6.png" alt="과제3 실행화면2" width="25%" />
-<img src="img/screenshot-7.png" alt="과제3 실행화면3" width="25%" />
+<img src="img/screenshot-5.png" alt="과제3 실행화면1" width="50%" />
+<img src="img/screenshot-6.png" alt="과제3 실행화면2" width="50%" />
+<img src="img/screenshot-7.png" alt="과제3 실행화면3" width="50%" />
 
 - 과제 내용
     - 사용하기 편하게 만들기
@@ -58,4 +58,20 @@
     - Escape 키를 누르면 현재 입력창이 초기화되는 기능 구현
     - Escape 키를 두 번 누르면 전체 입력창이 초기화되는 기능 구현
     - 체크박스를 추가하여 패스워드 입력란의 텍스트를 보이거나 숨기는 기능 구현
+
+
+## 실행 화면 (과제4)
+
+<img src="img/screenshot-8.png" alt="과제4 실행화면1" width="50%" />
+<img src="img/screenshot-9.png" alt="과제4 실행화면2" width="50%" />
+
+- 과제 내용
+    - 아이디와 패스워드 입력 문자 확인
+    - 로그인 시도 회수 제한 (2단계 확인 절차 추가)
+  
+- 구현 내용과 기능 설명
+      - 아이디와 패스워드 입력 시 REGEX를 활용하여 입력된 문자열이 유효한지 확인
+      - 로그인 시도 횟수를 카운트하여 5회 이상 실패 시 로그인 버튼을 비활성화하는 기능 구현
+      - 로그인 비활성화 시 남은 시간을 표시하는 기능 구현
+
 
