@@ -28,12 +28,79 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
+            lblAppName = new Label();
+            txtID = new TextBox();
+            txtPW = new TextBox();
+            btnLogin = new Button();
+            SuspendLayout();
+            // 
+            // lblAppName
+            // 
+            lblAppName.AutoSize = true;
+            lblAppName.Font = new Font("한컴 말랑말랑 Bold", 72F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            lblAppName.Location = new Point(183, 24);
+            lblAppName.Name = "lblAppName";
+            lblAppName.Size = new Size(306, 124);
+            lblAppName.TabIndex = 0;
+            lblAppName.Text = "Login";
+            // 
+            // txtID
+            // 
+            txtID.Font = new Font("나눔고딕", 27.75F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            txtID.ForeColor = Color.Silver;
+            txtID.Location = new Point(112, 182);
+            txtID.Name = "txtID";
+            txtID.Size = new Size(459, 50);
+            txtID.TabIndex = 2;
+            txtID.Text = "아이디";
+            txtID.Enter += txtID_Enter;
+            txtID.Leave += txtID_Leave;
+            // 
+            // txtPW
+            // 
+            txtPW.Font = new Font("나눔고딕", 27.75F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            txtPW.ForeColor = Color.Silver;
+            txtPW.Location = new Point(112, 254);
+            txtPW.Name = "txtPW";
+            txtPW.Size = new Size(459, 50);
+            txtPW.TabIndex = 3;
+            txtPW.Text = "패스워드";
+            txtPW.Enter += txtPW_Enter;
+            txtPW.Leave += txtPW_Leave;
+            // 
+            // btnLogin
+            // 
+            btnLogin.BackColor = Color.FromArgb(255, 255, 192);
+            btnLogin.FlatStyle = FlatStyle.Flat;
+            btnLogin.Font = new Font("한컴 말랑말랑 Bold", 20.2499962F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            btnLogin.Location = new Point(258, 323);
+            btnLogin.Name = "btnLogin";
+            btnLogin.Size = new Size(179, 43);
+            btnLogin.TabIndex = 1;
+            btnLogin.Text = "로그인";
+            btnLogin.UseVisualStyleBackColor = false;
+            btnLogin.Click += btnLogin_Click;
+            // 
+            // Form1
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Text = "Form1";
+            ClientSize = new Size(678, 384);
+            Controls.Add(btnLogin);
+            Controls.Add(txtPW);
+            Controls.Add(txtID);
+            Controls.Add(lblAppName);
+            Name = "Form1";
+            Text = "Login Screen";
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private Label lblAppName;
+        private TextBox txtID;
+        private TextBox txtPW;
+        private Button btnLogin;
     }
 }
